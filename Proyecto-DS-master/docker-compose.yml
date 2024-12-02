@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+    www:
+        container_name: php-apache
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        depends_on:
+            - db
+        volumes:
+            - ./www:/var/www/html/
+        ports:
+            - "82:80"
+    db:
+        container_name: db
+        image: mysql:8.0
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: clave
+            MYSQL_DATABASE: Ganaderia
+            MYSQL_USER: user
+            MYSQL_PASSWORD: test
+        ports:
+            - "3307:3306"
+        volumes:
+            - \Documents\Proyecto-DS-master\Proyecto-DS-master
+    phpmyadmin:
+        image: phpmyadmin
+        ports:
+            - '81:80'
+        restart: always
+        environment:
+            PMA_HOST: db
+        depends_on:
+            - db

@@ -1,0 +1,13 @@
+body {
+    background: linear-gradient(90deg, #19dd68 5%, #1967dd 35%,#1c5bb9 50% );
+}
+.card-img-left {
+    width: 45%;
+    background: url(../images/Imagen3.jpg);
+    background-size: cover;
+}
+.btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+}

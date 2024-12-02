@@ -1,0 +1,19 @@
+.login {
+    min-height: 100vh; /* Corrected '100hv' to '100vh' (viewport height) */
+}
+
+.bg-image {
+    background-image: url('../images/vaca.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100%; /* Added min-height to ensure the background covers the entire container */
+}
+
+.login-heading {
+    font-weight: 300;
+}
+
+.btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.075rem 0.1rem; /* Adjusted the letter-spacing values */
+}
